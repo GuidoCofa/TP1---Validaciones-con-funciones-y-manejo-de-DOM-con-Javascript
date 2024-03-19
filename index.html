@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de Notas</title>
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="icon" type="image/x-icon" href="./img/notas.png">
+
+</head>
+<div class="contenedor"><img id="ort" src="./img/ort.png" alt="Logo De Ort"></div>
+<body>
+  <div class="titulo"><h1>Formulario de Notas</h1></div>
+  <form id="formulario">
+    <div>
+      <label for="matematica"><b>Nota de Matemática:</b></label>
+      <input type="text" id="matematica" name="matematica" onkeyup="validarNota(this)">
+    </div>
+    <div>
+      <label for="lengua"><b>Nota de Lengua:</b></label>
+      <input type="text" id="lengua" name="lengua" onkeyup="validarNota(this)">
+    </div>
+    <div>
+      <label for="efsi"><b>Nota de EFSI:</b></label>
+      <input type="text" id="efsi" name="efsi" onkeyup="validarNota(this)">
+    </div>
+    <button type="button" onclick="calcularPromedio()"><b>Calcular Promedio del alumno</b></button>
+    <button type="button" onclick="mostrarMateriaMaxima()"><b>Mostrar la materia que mayor nota obtuvo</b></button>
+  </form>
+  <div id="resultado"></div>
+  <script src="./js/funciones.js"></script>
+</body>
+</html>
